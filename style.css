@@ -1,0 +1,265 @@
+/* ==== Global Reset & Base Styles ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #121212;
+  color: #ffd700;
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+/* ==== Header ==== */
+header {
+  background-color: #1c1c1c;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #ffd700;
+  position: relative;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 5px;
+}
+
+.slogan {
+  font-size: 1.1rem;
+  color: #cccccc;
+}
+
+#openSettings {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+  border: none;
+  color: #ffd700;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ==== Nickname Prompt ==== */
+#nicknamePrompt {
+  padding: 40px;
+  text-align: center;
+}
+
+#nicknamePrompt input {
+  padding: 10px;
+  font-size: 1rem;
+  width: 250px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 10px;
+  border: none;
+}
+
+#nicknamePrompt button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#nicknamePrompt button:hover {
+  background-color: #fff176;
+}
+
+/* ==== Main Content ==== */
+main {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ==== Upload Section ==== */
+#uploadSection {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px #ffd70044;
+}
+
+#uploadSection h2 {
+  margin-bottom: 15px;
+}
+
+#uploadForm textarea {
+  width: 100%;
+  height: 80px;
+  resize: none;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  background-color: #292929;
+  color: #ffd700;
+}
+
+#uploadForm input[type="file"] {
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+#uploadForm button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffd700;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#uploadForm button:hover {
+  background-color: #ffec8b;
+}
+
+/* ==== Feed Section ==== */
+#feedSection {
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #ffd70044;
+}
+
+#feed {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.post {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 4px solid #ffd700;
+}
+
+.post h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #ffef99;
+}
+
+.post p {
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.post video {
+  width: 100%;
+  max-height: 300px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.post .meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+.post .actions {
+  margin-top: 10px;
+}
+
+button.like-btn, button.favorite-btn {
+  margin-right: 10px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+button.like-btn {
+  background-color: #333;
+  color: #ff6666;
+}
+
+button.favorite-btn {
+  background-color: #333;
+  color: #66ccff;
+}
+
+button.like-btn:hover {
+  background-color: #ff6666;
+  color: white;
+}
+
+button.favorite-btn:hover {
+  background-color: #66ccff;
+  color: white;
+}
+
+/* ==== Settings Panel ==== */
+#settingsPanel {
+  position: fixed;
+  top: 50px;
+  right: 30px;
+  background-color: #1c1c1c;
+  border: 1px solid #ffd700;
+  padding: 20px;
+  border-radius: 15px;
+  z-index: 100;
+  width: 250px;
+  box-shadow: 0 0 15px #ffd70055;
+}
+
+#settingsPanel h2 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+#settingsPanel label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#settingsPanel select {
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #292929;
+  color: #ffd700;
+  border: none;
+}
+
+#settingsPanel button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffd700;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#settingsPanel button:hover {
+  background-color: #ffe873;
+}

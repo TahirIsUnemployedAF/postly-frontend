@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Postly — Say it, show it, share it.</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Postly</h1>
+    <p class="slogan">Say it, show it, share it.</p>
+    <button id="openSettings">⚙️</button>
+  </header>
+
+  <section id="nicknamePrompt">
+    <h2>Enter your nickname</h2>
+    <input type="text" id="nicknameInput" placeholder="e.g. TahirTheGreat" />
+    <button onclick="saveNickname()">Continue</button>
+  </section>
+
+  <main id="mainContent" class="hidden">
+    <section id="uploadSection">
+      <h2>New Post</h2>
+      <form id="uploadForm">
+        <textarea id="postText" placeholder="Write something..." required></textarea>
+        <input type="file" id="videoInput" accept="video/mp4,video/webm,video/ogg" />
+        <button type="submit">Upload</button>
+      </form>
+    </section>
+
+    <section id="feedSection">
+      <h2>Public Feed</h2>
+      <div id="feed" class="scrollable"></div>
+    </section>
+  </main>
+
+  <!-- Settings Panel -->
+  <div id="settingsPanel" class="hidden">
+    <h2>Settings</h2>
+    <label>
+      Font Size:
+      <select id="fontSize">
+        <option value="16px">Normal</option>
+        <option value="18px">Large</option>
+        <option value="20px">XL</option>
+      </select>
+    </label>
+    <label>
+      Theme:
+      <select id="themeSelect">
+        <option value="default">Black & Gold</option>
+        <option value="dark">Pure Dark</option>
+        <option value="light">Light Mode</option>
+      </select>
+    </label>
+    <button onclick="closeSettings()">Close</button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="settings.js"></script>
+</body>
+</html>
